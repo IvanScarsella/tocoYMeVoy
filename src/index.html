@@ -1,13 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>TocoYMeVoy</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Toco Y Me Voy</title>
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="h-full bg-cover bg-center mx-auto">
+      <app-root
+        class="block w-[360px] h-[640px] bg-white mx-auto min-[400px]:my-[100px] overflow-y-auto"></app-root>
+    </div>
+    <div
+      class="fixed left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat opacity-20 max-[400px]:hidden"
+      style="background-image: url('./assets/loadingImage.png')"></div>
+  </body>
 </html>
