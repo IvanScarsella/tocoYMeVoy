@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, RouterLink, RouterOutlet],
   template: `
   <div class="relative h-full">
   <img class="absolute left-0 top-0 w-full h-full object-cover" src="./assets/messi.jpg" alt="Messi" />
@@ -20,7 +21,7 @@ import { ButtonComponent } from '../../components/button/button.component';
       <input type="checkbox" class="bg-transparent w-4 h-4 appearance-none border-2 border-white rounded-sm cursor-pointer" />
     </div>
     <app-button class="w-[328px] h-14 mt-5" [text]="buttonText"/>
-    <app-button class="w-[235px] h-10 rounded-3xl mt-2" [text]="buttonText2"/>
+    <app-button class="w-[235px] h-10 rounded-3xl mt-2" [text]="buttonText2" routerLink='/user-register'/>
     <button class="text-sm font-medium w-[193px] h-[46px] bg-white rounded-3xl flex flex-row justify-around items-center px-2 mt-3"><span ><img src='../assets/google.png' alt='google' class='h-[18px] w-[18px]'/></span>Ingresar con Google</button>
     <p class="text-xs text-white underline cursor-pointer mt-5">Olvidé mi contraseña</p>
   </div>

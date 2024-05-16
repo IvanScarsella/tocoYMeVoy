@@ -3,12 +3,13 @@ import { DateAdapter, MAT_DATE_LOCALE, provideNativeDateAdapter } from '@angular
 import { MatDatepickerIntl, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-user-register',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
+  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule],
   templateUrl: './user-register.component.html',
   styles: ``
 })
