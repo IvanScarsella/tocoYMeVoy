@@ -1,0 +1,35 @@
+<div
+  class="absolute bottom-0 left-0 right-0 bg-[#324B4F] h-20 w-full flex flex-row justify-between items-center px-2 pt-3 pb-4">
+  @for (section of buttons; track $index) {
+  <div
+    class="flex flex-col gap-1 items-center w-[109px]"
+    (click)="onOption(section.section)"
+    [routerLink]="section.url">
+    <div
+      class="h-[32px] w-16 px-[22px] bg-[#A9EBF6] rounded-full flex flex-row items-center"
+      [ngClass]="{
+        'bg-[#A9EBF6] ': '/' + menuOption?.toLowerCase() === section.url
+      }">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        [ngClass]="{
+          'text-[#324B4F] ': '/' + menuOption?.toLowerCase() === section.url,
+          'text-[#F8F8F8] ': '/' + menuOption?.toLowerCase() !== section.url
+        }">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          [attr.d]="section.image" />
+      </svg>
+    </div>
+    <p class="text-[#F9F9F9] text-xs font-semibold tracking-wider">
+      {{ section.section | titlecase }}
+    </p>
+  </div>
+  }
+</div>

@@ -1,73 +1,77 @@
-<div class="flex flex-col items-center gap-2 text-[#282828] mb-28">
-  <h1 class="text-5xl font-bold mt-14">Registro</h1>
-  <div class="flex flex-col gap-1 mt-8">
-    <p class="text-xl">Nombre</p>
-    <input
-      type="text"
-      class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
-  </div>
-  <div class="flex flex-col gap-1">
-    <p class="text-xl">Apellido</p>
-    <input
-      type="text"
-      class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
-  </div>
-  <div class="flex flex-col gap-1">
-    <p class="text-xl">E-mail</p>
-    <input
-      type="text"
-      class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
-  </div>
-  <div class="flex flex-col gap-1">
-    <p class="text-xl">Contraseña</p>
-    <input
-      type="password"
-      class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
-  </div>
-  <div class="flex flex-col gap-1">
-    <p class="text-xl">Fecha de Nacimiento</p>
-    <mat-form-field class="w-[328px]">
-      <mat-label class="">Choose a date</mat-label>
-      <input
-        matInput
-        [matDatepicker]="picker" />
-      <mat-hint>MM/DD/YYYY</mat-hint>
-      <mat-datepicker-toggle
-        matIconSuffix
-        [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div>
-      <p class="text-xl">Ubicación</p>
-      <p class="text-xs text-gray-500">
-        Para encontrar partidos en tu zona habilitá la ubicación.
-      </p>
-    </div>
-    <div
-      class="w-[328px] bg-[#B9DBE0] bg-opacity-[.64] flex flex-row items-center rounded-lg">
+<div class="relative overflow-hidden">
+  <div
+    class="flex flex-col items-center gap-2 text-[#282828] mb-28 h-[540px] overflow-y-auto overflow-hidden">
+    <h1 class="text-5xl font-bold mt-14">Registro</h1>
+    <div class="flex flex-col gap-1 mt-8">
+      <p class="text-xl">Nombre</p>
       <input
         type="text"
-        class="text-black text-sm p-4 w-5/6 h-[56px] bg-[#B9DBE0] bg-opacity-[0] rounded-lg" />
-      <div class="my-auto p-1">
-        <mat-icon
-          aria-hidden="false"
-          aria-label="Example home icon"
-          fontIcon="my_location"
-          class="w-1/6 my-auto ml-[14px]"></mat-icon>
+        class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <p class="text-xl">Apellido</p>
+      <input
+        type="text"
+        class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <p class="text-xl">E-mail</p>
+      <input
+        type="text"
+        class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <p class="text-xl">Contraseña</p>
+      <input
+        type="password"
+        class="text-black text-lg p-4 w-[328px] h-[56px] bg-[#B9DBE0] bg-opacity-[.64] rounded-lg border border-[#A9EBF6]" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <p class="text-xl">Fecha de Nacimiento</p>
+      <mat-form-field class="w-[328px]">
+        <mat-label class="">Seleccione fecha</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="flex flex-col gap-1">
+      <div>
+        <p class="text-xl">Ubicación</p>
+        <p class="text-xs text-gray-500">
+          Para encontrar partidos en tu zona habilitá la ubicación.
+        </p>
+      </div>
+      <div
+        class="w-[328px] bg-[#B9DBE0] bg-opacity-[.64] flex flex-row items-center rounded-lg">
+        <input
+          type="text"
+          class="text-black text-sm p-4 w-5/6 h-[56px] bg-[#B9DBE0] bg-opacity-[0] rounded-lg" />
+        <div class="my-auto p-1">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="my_location"
+            class="w-1/6 my-auto ml-[14px]"></mat-icon>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div
-  class="fixed min-[400px]:bottom-56 min-[400px]:left-24 bottom-0 left-0 right-0 min-[400px]:w-[360px] bg-white w-full h-24 flex flex-row justify-around pt-4">
-  <button
-    class="rounded-3xl bg-white h-10 w-[140px] text-2xl border border-[#3E5CC6]">
-    Cancelar
-  </button>
-  <button
-    class="rounded-3xl bg-[#A9EBF6] h-10 w-[140px] text-2xl border border-[#3E5CC6]">
-    Aceptar
-  </button>
+  <div
+    class="bg-white w-full h-24 flex flex-row justify-around pt-4 absolute bottom-0 left-0 right-0 z-50">
+    <button
+      class="rounded-3xl bg-white h-10 w-[140px] text-2xl border border-[#3E5CC6]">
+      Cancelar
+    </button>
+    <button
+      routerLink="/home"
+      class="rounded-3xl bg-[#A9EBF6] h-10 w-[140px] text-2xl border border-[#3E5CC6]">
+      Aceptar
+    </button>
+  </div>
 </div>

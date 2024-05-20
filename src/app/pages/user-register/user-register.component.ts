@@ -4,12 +4,13 @@ import { MatDatepickerIntl, MatDatepickerModule } from '@angular/material/datepi
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-user-register',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule],
+  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, RouterLink, RouterOutlet],
   templateUrl: './user-register.component.html',
   styles: ``
 })
