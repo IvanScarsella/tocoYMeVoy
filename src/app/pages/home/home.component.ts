@@ -1,11 +1,12 @@
-import { Component, Output, output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component'
 import { MissingOneCardComponent } from '../../components/missing-one-card/missing-one-card.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, MissingOneCardComponent],
+  imports: [NavbarComponent, MissingOneCardComponent, RouterLink, RouterOutlet],
   templateUrl: './home.component.html',
   styles: ``
 })

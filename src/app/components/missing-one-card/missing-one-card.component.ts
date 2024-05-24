@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-missing-one-card',
@@ -10,13 +10,5 @@ import { Component, Input, input } from '@angular/core';
 export class MissingOneCardComponent {
 
   @Input() data?: any
-  // missingOneData: any[] = [
-
-  // ]
-  constructor() {
-    if (this.data) {
-      console.log(this.data)
-    }
-  }
 
 }
