@@ -1,4 +1,38 @@
-<div class="relative h-full">
-  <p>Chat</p>
-  <app-navbar></app-navbar>
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div class="flex-grow overflow-y-auto mb-20">
+    <div class="flex flex-row items-center mt-[19px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 ml-[23px] m-3 cursor-pointer"
+        routerLink="/home">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+
+      <h1 class="font-semibold text-4xl ml-[76px] w-[84px]">Chat</h1>
+    </div>
+
+    <div class="flex flex-col items-center gap-3.5 mt-[54px]">
+      @for (contact of contactsList; track $index){
+      <div
+        class="h-[72px] w-[328px] flex flex-row items-center px-[5px] border-b border-[#39393964]">
+        <div class="mr-4 h-[62px] w-[62px] rounded-full">
+          <img
+            [src]="contact.image"
+            [alt]="contact.name"
+            class="container rounded-full" />
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-normal text-base">{{ contact.name }}</p>
+          <p class="italic text-sm">{{ contact.lastMessage }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
 </div>
