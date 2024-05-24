@@ -1,13 +1,13 @@
 <div
   class="h-20 w-[313px] border border-black rounded-2xl shadow-xl flex flex-row justify-between items-center">
   <div class="ml-4">
-    <p class="text-base font-medium">5 vs 5 - 19:00 Hs</p>
-    <p class="text-sm">Falta uno para completar</p>
+    <p class="text-base font-medium">{{ data.title }}</p>
+    <p class="text-sm">{{ data.description }}</p>
   </div>
   <div class="w-[78px] h-[78px]">
     <img
-      src="../../../assets/profile1.jpg"
+      [src]="data.image"
       alt="profileImage"
-      class="container rounded-r-2xl" />
+      class="container rounded-r-2xl max-h-[78px]" />
   </div>
 </div>

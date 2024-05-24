@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, output } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component'
 import { MissingOneCardComponent } from '../../components/missing-one-card/missing-one-card.component';
 
@@ -17,9 +17,9 @@ export class HomeComponent {
     { image: '../../../assets/home3.png', title: 'Amigos', description: 'Lista de amigos que hiciste en la cancha' },
   ]
 
-  missingOneCards: any[] = [
-    {},
-    {}
+  @Output() missingOneCards: any[] = [
+    { title: '5 vs 5 - 19:00 Hs', description: 'Falta uno para completar', image: '../../../assets/profile1.jpg' },
+    { title: '7 vs 7 - 22:00 Hs', description: 'Faltan dos para completar mixto', image: '../../../assets/profile2.jpg' }
   ]
 
 }
