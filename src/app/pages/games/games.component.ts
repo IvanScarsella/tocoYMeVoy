@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, RouterLink, RouterOutlet],
   templateUrl: './games.component.html',
   styles: ``
 })
