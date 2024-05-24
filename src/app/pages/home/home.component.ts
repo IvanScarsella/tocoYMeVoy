@@ -13,9 +13,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class HomeComponent {
 
   homeCards: any[] = [
-    { image: '../../../assets/home1.png', title: 'Me falta uno', description: 'Si te faltan jugadores entrá a crear tu búsqueda' },
-    { image: '../../../assets/home2.jpg', title: 'Partidos', description: 'Partidos programados dentro de uno o dos días' },
-    { image: '../../../assets/home3.png', title: 'Amigos', description: 'Lista de amigos que hiciste en la cancha' },
+    { image: '../../../assets/home1.png', url: '/missingOneList', title: 'Me falta uno', description: 'Si te faltan jugadores entrá a crear tu búsqueda' },
+    { image: '../../../assets/home2.jpg', url: '/games', title: 'Partidos', description: 'Partidos programados dentro de uno o dos días' },
+    { image: '../../../assets/home3.png', url: '/friends', title: 'Amigos', description: 'Lista de amigos que hiciste en la cancha' },
   ]
 
   @Output() missingOneCards: any[] = [

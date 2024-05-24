@@ -1,0 +1,42 @@
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div class="flex-grow overflow-y-auto mb-20">
+    <div class="flex flex-row items-center mt-[19px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 ml-[23px] m-3 cursor-pointer"
+        routerLink="/home">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+
+      <h1 class="font-semibold text-4xl ml-[54px] w-[140px]">Partidos</h1>
+    </div>
+    <div class="flex flex-col items-center gap-3.5 mt-[55px] mb-4">
+      @for (game of gamesList; track $index){
+      <div
+        class="min-h-[272px] w-[328px] bg-[#324B4F] rounded-2xl shadow-xl flex flex-col items-center gap-2 text-[#F9F9F9] text-center p-3">
+        <h2 class="font-medium text-xl">{{ game.title }}</h2>
+        <div class="h-20 w-[136px]">
+          <img
+            src="../../../assets/yard.png"
+            alt="yardImage"
+            class="container" />
+        </div>
+        <p class="font-light text-base">{{ game.location }}</p>
+        <p class="font-light text-base">Cuando: {{ game.date }}</p>
+        <p class="font-light text-base">Hora: {{ game.schedule }}</p>
+        @if (game.front) {
+        <p class="font-light text-base">Pecheras: Si</p>
+        } @else {
+        <p class="font-light text-base">Pecheras: No</p>
+        }
+      </div>
+      }
+    </div>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
+</div>

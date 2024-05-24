@@ -5,6 +5,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MissingOneListComponent } from './pages/missing-one-list/missing-one-list.component';
+import { GamesComponent } from './pages/games/games.component';
+import { FriendsComponent } from './pages/friends/friends.component';
 
 export const routes: Routes = [
    { path: 'login', component: LoginComponent },
@@ -13,5 +15,7 @@ export const routes: Routes = [
    { path: 'chat', component: ChatComponent },
    { path: 'profile', component: ProfileComponent },
    { path: 'missingOneList', component: MissingOneListComponent },
+   { path: 'games', component: GamesComponent },
+   { path: 'friends', component: FriendsComponent },
    { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

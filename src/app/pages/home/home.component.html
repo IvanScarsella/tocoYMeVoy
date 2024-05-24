@@ -59,7 +59,8 @@
         class="h-[310px] flex flex-row gap-[43px] px-6 pb-2 pt-[22px] overflow-x-auto">
         @for (card of homeCards; track $index) {
         <div
-          class="shrink-0 h-[280px] w-[200px] bg-white flex flex-col items-center pb-0.5 rounded-xl shadow-xl">
+          class="shrink-0 h-[280px] w-[200px] bg-white flex flex-col items-center pb-0.5 rounded-xl shadow-xl cursor-pointer"
+          [routerLink]="card.url">
           <div class="max-h-[133px] h-[133px] w-[200px]">
             <img
               [src]="card.image"
