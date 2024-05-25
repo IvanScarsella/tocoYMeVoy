@@ -7,12 +7,14 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { MissingOneListComponent } from './pages/missing-one-list/missing-one-list.component';
 import { GamesComponent } from './pages/games/games.component';
 import { FriendsComponent } from './pages/friends/friends.component';
+import { FriendChatComponent } from './pages/friend-chat/friend-chat.component';
 
 export const routes: Routes = [
    { path: 'login', component: LoginComponent },
    { path: 'user-register', component: UserRegisterComponent },
    { path: 'home', component: HomeComponent },
    { path: 'chat', component: ChatComponent },
+   { path: 'chat/:name', component: FriendChatComponent },
    { path: 'profile', component: ProfileComponent },
    { path: 'missingOneList', component: MissingOneListComponent },
    { path: 'games', component: GamesComponent },
