@@ -1,0 +1,50 @@
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div class="flex-grow overflow-y-auto mb-20">
+    <div class="flex flex-row items-center h-[88px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 ml-[23px] m-3 cursor-pointer"
+        routerLink="/games">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+      <h1 class="font-normal text-4xl ml-[72px]">
+        {{ game?.title }}
+      </h1>
+    </div>
+
+    <div
+      class="w-[328px] max-h-[480px] min-h-[440px] overflow-y-auto mx-auto flex flex-col gap-6 items-center px-2 my-2"
+      style="
+        background-image: url('../../../assets/yardCyan.png');
+        background-position: -16px;
+      ">
+      <div class="h-40 w-40">
+        <img
+          [src]="game.image"
+          [alt]="game.title"
+          class="container rounded-full max-h-40 max-w-40" />
+      </div>
+      <p class="text-2xl font-light text-center">{{ game.location }}</p>
+      <p class="text-2xl font-light text-center">Cuando: {{ game.date }}</p>
+      <p class="text-2xl font-light text-center">
+        Hora: {{ game.schedule }} Hs
+      </p>
+      @if (game.front) {
+      <p class="text-2xl font-light text-center">Pecheras: Si</p>
+      } @else {
+      <p class="text-2xl font-light text-center">Pecheras: No</p>
+      }
+      <p class="text-2xl font-light text-center">{{ game.price }}</p>
+      <p class="text-2xl font-light text-center">Fútbol: {{ game.genre }}</p>
+      <app-button
+        text="Postularme"
+        class="w-[235px] border border-[#3E5CC6] rounded-full"></app-button>
+    </div>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
+</div>
