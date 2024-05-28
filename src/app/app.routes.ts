@@ -10,6 +10,7 @@ import { FriendsComponent } from './pages/friends/friends.component';
 import { FriendChatComponent } from './pages/friend-chat/friend-chat.component';
 import { GameAplicationComponent } from './pages/game-aplication/game-aplication.component';
 import { MissingOneAplicationComponent } from './pages/missing-one-aplication/missing-one-aplication.component';
+import { CreateGameComponent } from './pages/create-game/create-game.component';
 
 export const routes: Routes = [
    { path: 'login', component: LoginComponent },
@@ -23,5 +24,6 @@ export const routes: Routes = [
    { path: 'games', component: GamesComponent },
    { path: 'games/:id', component: GameAplicationComponent },
    { path: 'friends', component: FriendsComponent },
+   { path: 'createGame', component: CreateGameComponent },
    { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

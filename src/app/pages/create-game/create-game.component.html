@@ -1,0 +1,100 @@
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div class="flex-grow overflow-y-auto mb-20 px-4">
+    <div class="flex flex-row items-center mt-[19px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 ml-[7px] m-3 cursor-pointer"
+        routerLink="/home">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+
+      <h1 class="font-semibold text-4xl ml-[14px] w-[full]">Me Falta Uno</h1>
+    </div>
+
+    <div
+      class="flex flex-row gap-[5px] flex-wrap w-[328px] justify-around mt-6">
+      <p class="text-xl">Me falta</p>
+      <select
+        class="bg-[#324B4F] text-white text-xl rounded-lg px-3 cursor-pointer">
+        <option>Uno</option>
+        <option>Dos</option>
+      </select>
+      <p class="text-xl">para un</p>
+      <select
+        class="bg-[#324B4F] text-white text-xl rounded-lg px-3 cursor-pointer">
+        <option>5 vs 5</option>
+        <option>7 vs 7</option>
+      </select>
+      <p class="text-xl">en fútbol</p>
+      <select
+        class="bg-[#324B4F] text-white text-xl rounded-lg px-3 cursor-pointer">
+        <option>Masculino</option>
+        <option>Femenino</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col items-center gap-4 mt-[30px]">
+      <div class="flex flex-col gap-2">
+        <p class="text-base">Ubicación del predio</p>
+        <input
+          type="text"
+          placeholder="Rockandgol, 520 y Av.19"
+          class="text-black text-lg p-4 w-[328px] h-[56px] rounded-lg border border-[#324B4F]" />
+      </div>
+      <div class="flex flex-col gap-1">
+        <p class="text-sm">Fecha del partido</p>
+        <mat-form-field class="w-[328px] rounded-lg border-2 border-[#324B4F]">
+          <mat-label class="">Seleccione fecha</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="text-sm">Hora del partido</p>
+        <input
+          type="text"
+          placeholder="21:00 Hs"
+          class="text-black text-lg p-4 w-[328px] h-[56px] rounded-lg border border-[#324B4F]" />
+      </div>
+    </div>
+    <div class="text-xl flex flex-row gap-12 px-2 justify-start">
+      <p class="mt-[22px]">Pecheras:</p>
+      <div class="flex flex-col gap-1">
+        <label for="opcion1">Si</label>
+        <input
+          type="radio"
+          id="opcion1"
+          name="opcion"
+          value="Si" />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="opcion2">No</label>
+        <input
+          type="radio"
+          id="opcion2"
+          name="opcion"
+          value="No" />
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 my-4">
+      <p class="text-sm">Precio de la cancha:</p>
+      <input
+        type="text"
+        placeholder="$3000"
+        class="text-black text-lg p-4 w-[328px] h-[56px] rounded-lg border border-[#324B4F]" />
+    </div>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
+</div>
