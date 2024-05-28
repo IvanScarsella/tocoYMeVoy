@@ -1,0 +1,35 @@
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div
+    class="flex-grow overflow-y-auto mb-20 bg-gradient-to-b from-[#324B4F] to-white">
+    <div class="flex flex-row items-center mt-[16px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 text-[#F9F9F9] ml-[23px] m-3 cursor-pointer"
+        routerLink="/profile">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div
+      class="w-[328px] h-[168px] overflow-hidden max-w-[328px] max-h-[168px] rounded-xl mx-auto">
+      <img
+        src="./assets/userProfile.png"
+        alt="user-image"
+        class="container -mt-10" />
+    </div>
+    <h1 class="text-white font-medium text-[32px] mt-[35px] text-center">
+      Alejandro Serrangeli
+    </h1>
+    <h1 class="text-white font-light text-[32px] mt-[35px] text-center">
+      22/03/1995
+    </h1>
+    <h1 class="text-white font-light text-2xl mt-[35px] text-center">
+      La Plata, Buenos Aires
+    </h1>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
+</div>

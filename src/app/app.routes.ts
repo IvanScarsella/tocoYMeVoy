@@ -11,6 +11,7 @@ import { FriendChatComponent } from './pages/friend-chat/friend-chat.component';
 import { GameAplicationComponent } from './pages/game-aplication/game-aplication.component';
 import { MissingOneAplicationComponent } from './pages/missing-one-aplication/missing-one-aplication.component';
 import { CreateGameComponent } from './pages/create-game/create-game.component';
+import { ProfileViewComponent } from './pages/profile-view/profile-view.component';
 
 export const routes: Routes = [
    { path: 'login', component: LoginComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
    { path: 'chat', component: ChatComponent },
    { path: 'chat/:name', component: FriendChatComponent },
    { path: 'profile', component: ProfileComponent },
+   { path: 'profileView', component: ProfileViewComponent },
    { path: 'missingOneList', component: MissingOneListComponent },
    { path: 'missingOneList/:id', component: MissingOneAplicationComponent },
    { path: 'games', component: GamesComponent },
