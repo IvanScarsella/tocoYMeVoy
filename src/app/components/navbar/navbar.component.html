@@ -2,7 +2,7 @@
   class="absolute bottom-0 left-0 right-0 bg-[#324B4F] h-20 w-full flex flex-row justify-between items-center px-2 pt-3 pb-4">
   @for (section of buttons; track $index) {
   <div
-    class="flex flex-col gap-1 items-center w-[109px]"
+    class="flex flex-col gap-1 items-center w-[109px] cursor-pointer"
     (click)="onOption(section.section)"
     [routerLink]="section.url">
     <div
