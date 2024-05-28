@@ -1,7 +1,9 @@
-import { Component, Output } from '@angular/core';
+import { Component, OnInit, Output, inject } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component'
 import { MissingOneCardComponent } from '../../components/missing-one-card/missing-one-card.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { GamesService } from '../../services/games.service';
+import { Game } from '../../models/chat.model';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './home.component.html',
   styles: ``
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   homeCards: any[] = [
     { image: '../../../assets/home1.png', url: '/missingOneList', title: 'Me falta uno', description: 'Si te faltan jugadores entrá a crear tu búsqueda' },
@@ -18,9 +20,11 @@ export class HomeComponent {
     { image: '../../../assets/home3.png', url: '/friends', title: 'Amigos', description: 'Lista de amigos que hiciste en la cancha' },
   ]
 
-  @Output() missingOneCards: any[] = [
-    { title: '5 vs 5 - 19:00 Hs', description: 'Falta uno para completar', image: '../../../assets/profile1.jpg' },
-    { title: '7 vs 7 - 22:00 Hs', description: 'Faltan dos para completar mixto', image: '../../../assets/profile2.jpg' }
-  ]
+  @Output() missingOneCards?: Game[]
 
+  private _gamesService = inject(GamesService)
+
+  ngOnInit(): void {
+    this.missingOneCards = this._gamesService.getMissingOneList().slice(0, 2)
+  }
 }

@@ -17,7 +17,9 @@
     </div>
     <div class="flex flex-col items-center gap-3.5 mt-[55px] mb-4">
       @for (card of missingOneCards; track $index){
-      <app-missing-one-card [data]="card"></app-missing-one-card>
+      <app-missing-one-card
+        [data]="card"
+        [routerLink]="card.id.toString()"></app-missing-one-card>
       }
     </div>
   </div>

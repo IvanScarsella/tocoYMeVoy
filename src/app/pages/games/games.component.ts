@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { GamesService } from '../../services/games.service';
+import { Game } from '../../models/chat.model';
 
 @Component({
   selector: 'app-games',
@@ -12,7 +13,7 @@ import { GamesService } from '../../services/games.service';
 })
 export class GamesComponent implements OnInit {
 
-  gamesList?: any[]
+  gamesList?: Game[]
 
   private _gamesService = inject(GamesService)
 

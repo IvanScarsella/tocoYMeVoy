@@ -9,6 +9,7 @@ import { GamesComponent } from './pages/games/games.component';
 import { FriendsComponent } from './pages/friends/friends.component';
 import { FriendChatComponent } from './pages/friend-chat/friend-chat.component';
 import { GameAplicationComponent } from './pages/game-aplication/game-aplication.component';
+import { MissingOneAplicationComponent } from './pages/missing-one-aplication/missing-one-aplication.component';
 
 export const routes: Routes = [
    { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
    { path: 'chat/:name', component: FriendChatComponent },
    { path: 'profile', component: ProfileComponent },
    { path: 'missingOneList', component: MissingOneListComponent },
+   { path: 'missingOneList/:id', component: MissingOneAplicationComponent },
    { path: 'games', component: GamesComponent },
    { path: 'games/:id', component: GameAplicationComponent },
    { path: 'friends', component: FriendsComponent },

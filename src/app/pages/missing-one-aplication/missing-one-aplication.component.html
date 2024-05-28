@@ -1,0 +1,57 @@
+<div class="relative h-full flex flex-col overflow-y-auto">
+  <div class="flex-grow overflow-y-auto mb-20">
+    <div class="flex flex-row items-center h-[88px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-7 ml-[23px] m-3 cursor-pointer"
+        routerLink="/missingOneList">
+        <path
+          fill-rule="evenodd"
+          d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+          clip-rule="evenodd" />
+      </svg>
+      <h1 class="font-normal text-[40px] text-[#324B4F] ml-[64px] mt-[66px]">
+        {{ game?.title }}
+      </h1>
+    </div>
+
+    <div
+      class="w-[328px] max-h-[480px] min-h-[440px] overflow-y-auto mx-auto flex flex-col gap-3 items-center px-2 my-2">
+      <div class="h-32 w-32 mt-[22px]">
+        <img
+          [src]="game?.image"
+          [alt]="game?.title"
+          class="container rounded-full max-h-32 max-w-32" />
+      </div>
+      <p class="text-xl font-medium text-center mt-2">{{ game?.admin }}</p>
+      <div class="bg-black w-[276px] h-[1px] mt-[21px] p-[1px]"></div>
+      <p class="text-xl font-medium text-center">
+        Fútbol: <span class="font-normal">{{ game?.genre }}</span>
+      </p>
+      <p class="text-xl font-medium text-center">
+        Cuando: <span class="font-normal">{{ game?.date }}</span>
+      </p>
+      <p class="text-xl font-medium text-center">
+        Donde: <span class="font-normal">{{ game?.location }}</span>
+      </p>
+      @if (game?.front) {
+      <p class="text-xl font-medium text-center">
+        Pecheras: <span class="font-normal">Si</span>
+      </p>
+      } @else {
+      <p class="text-xl font-medium text-center">
+        Pecheras: <span class="font-normal">No</span>
+      </p>
+      }
+      <p class="text-xl font-medium text-center">
+        Precio de la cancha: <span class="font-normal">{{ game?.price }}</span>
+      </p>
+      <app-button
+        text="Postularme"
+        class="w-[235px] h-10 rounded-full mt-5"></app-button>
+    </div>
+  </div>
+  <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
+</div>

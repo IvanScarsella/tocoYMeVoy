@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { GamesService } from '../../services/games.service';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { ButtonComponent } from '../../components/button/button.component';
+import { Game } from '../../models/chat.model';
 
 @Component({
   selector: 'app-game-aplication',
@@ -13,7 +14,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 })
 export class GameAplicationComponent implements OnInit {
 
-  game?: any
+  game?: Game
 
   private _route = inject(ActivatedRoute)
   private _gamesService = inject(GamesService)

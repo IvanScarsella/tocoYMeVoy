@@ -25,25 +25,25 @@
       ">
       <div class="h-40 w-40">
         <img
-          [src]="game.image"
-          [alt]="game.title"
+          [src]="game?.image"
+          [alt]="game?.title"
           class="container rounded-full max-h-40 max-w-40" />
       </div>
-      <p class="text-2xl font-light text-center">{{ game.location }}</p>
-      <p class="text-2xl font-light text-center">Cuando: {{ game.date }}</p>
+      <p class="text-2xl font-light text-center">{{ game?.location }}</p>
+      <p class="text-2xl font-light text-center">Cuando: {{ game?.date }}</p>
       <p class="text-2xl font-light text-center">
-        Hora: {{ game.schedule }} Hs
+        Hora: {{ game?.schedule }} Hs
       </p>
-      @if (game.front) {
+      @if (game?.front) {
       <p class="text-2xl font-light text-center">Pecheras: Si</p>
       } @else {
       <p class="text-2xl font-light text-center">Pecheras: No</p>
       }
-      <p class="text-2xl font-light text-center">{{ game.price }}</p>
-      <p class="text-2xl font-light text-center">Fútbol: {{ game.genre }}</p>
+      <p class="text-2xl font-light text-center">{{ game?.price }}</p>
+      <p class="text-2xl font-light text-center">Fútbol: {{ game?.genre }}</p>
       <app-button
         text="Postularme"
-        class="w-[235px] border border-[#3E5CC6] rounded-full"></app-button>
+        class="w-[235px] rounded-full"></app-button>
     </div>
   </div>
   <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
