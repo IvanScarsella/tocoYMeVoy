@@ -1,3 +1,36 @@
+@if (loading){
+<div class="h-[640px] w-[360px] relative">
+  <img
+    src="../../../assets/loadingImage.png"
+    alt="loading"
+    class="absolute inset-0 h-full w-full object-cover" />
+  <span
+    class="absolute inset-0 flex items-center justify-center m-auto spinner"
+    style="
+      width: 48px;
+      height: 48px;
+      border: 5px solid #fff;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      box-sizing: border-box;
+    "></span>
+</div>
+<style>
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner {
+    animation: rotation 1s linear infinite;
+  }
+</style>
+
+} @else {
 <div class="relative h-full">
   <img
     class="absolute left-0 top-0 w-full h-full object-cover"
@@ -47,3 +80,5 @@
     </p>
   </div>
 </div>
+
+}
