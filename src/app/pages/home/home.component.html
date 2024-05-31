@@ -58,7 +58,8 @@
         <div class="bg-black w-[32px] h-[1px]"></div>
       </div>
       <div
-        class="h-[310px] flex flex-row gap-[43px] px-6 pb-2 pt-[22px] overflow-x-auto">
+        id="scrollContainer"
+        class="carousel-container h-[310px] flex flex-row gap-[43px] px-6 pb-2 pt-[22px] overflow-x-auto scroll-smooth overflow-clip">
         @for (card of homeCards; track $index) {
         <div
           class="shrink-0 h-[280px] w-[200px] bg-white flex flex-col items-center pb-0.5 rounded-xl shadow-xl cursor-pointer"

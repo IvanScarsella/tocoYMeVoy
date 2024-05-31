@@ -8,7 +8,7 @@ import { Game } from '../../models/chat.model';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, MissingOneCardComponent, RouterLink, RouterOutlet],
+  imports: [NavbarComponent, MissingOneCardComponent, RouterLink, RouterOutlet,],
   templateUrl: './home.component.html',
   styles: ``
 })
