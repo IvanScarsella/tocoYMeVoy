@@ -43,8 +43,18 @@
       <p class="text-2xl font-light text-center">Fútbol: {{ game?.genre }}</p>
       <app-button
         text="Postularme"
-        class="w-[235px] rounded-full"></app-button>
+        class="w-[235px] rounded-full"
+        (click)="handleShowModal()"></app-button>
     </div>
   </div>
+  @if(showModal === true && game?.genre==='Femenino'){
+  <app-error-modal
+    class="fixed top-80 left-20 right-20 flex items-center justify-center m-auto"
+    (click)="handleShowModal()"></app-error-modal>
+  } @else if(showModal === true){
+  <app-modal
+    class="fixed top-80 left-20 right-20 flex items-center justify-center m-auto"
+    (click)="handleShowModal()"></app-modal>
+  }
   <app-navbar class="sticky bottom-0 left-0 right-0"></app-navbar>
 </div>

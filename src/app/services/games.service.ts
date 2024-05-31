@@ -11,7 +11,7 @@ export class GamesService {
     { id: 2, title: '7 vs 7', admin: 'Brenda Quiroga', date: 'Mañana', schedule: '22:00 Hs', front: true, location: '12 y 69, Camp Nou, La Plata', price: '$3000', description: 'Faltan dos para completar mixto', image: '../../../assets/profile2.jpg', genre: 'Masculino' },
     { id: 3, title: '6 vs 6', admin: 'Ricardo Alberti', date: 'Hoy', schedule: '23:00 Hs', front: false, location: '12 y 69, Camp Nou, La Plata', price: '$2500', description: 'Falta uno para completar', image: '../../../assets/profile3.png', genre: 'Masculino' },
     { id: 4, title: '5 vs 5', admin: 'Matías Domínguez', date: 'Hoy', schedule: '21:00 Hs', front: false, location: '12 y 69, Camp Nou, La Plata', price: '$2500', description: 'Falta uno para completar', image: '../../../assets/profile4.jpg', genre: 'Masculino' },
-    { id: 5, title: '5 vs 5', admin: 'Maite Figueras', date: 'Hoy', schedule: '20:00 Hs', front: false, location: '12 y 69, Camp Nou, La Plata', price: '$2500', description: 'Falta uno para completar', image: '../../../assets/profile5.jpg', genre: 'Masculino' },
+    { id: 5, title: '5 vs 5', admin: 'Maite Figueras', date: 'Hoy', schedule: '20:00 Hs', front: false, location: '12 y 69, Camp Nou, La Plata', price: '$2500', description: 'Falta uno para completar', image: '../../../assets/profile5.jpg', genre: 'Femenino' },
   ]
 
   gamesList: Game[] = [
